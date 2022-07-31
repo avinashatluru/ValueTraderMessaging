@@ -24,7 +24,7 @@ def sendemail(message):
 
 
 def download_data(ticker):
-    url = 'https://api.iextrading.com/1.0/stock/%s/chart/5y' % (ticker)
+    url = 'https://cloud.iexapis.com/stable/stock/%s/chart/5y?token=YOUR_TOKEN_HERE' % (ticker)
     response = requests.get(url)
     data = json.loads(response.text)
     dataframe_li = []
